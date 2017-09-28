@@ -84,11 +84,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\MapGeneration\EdgeVertices.cs" />
+    <Compile Include="Assets\Scripts\MapGeneration\Enumerations.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\Grid.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\HexCell.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\HexCoordinates.cs" />
-    <Compile Include="Assets\Scripts\MapGeneration\HexDirection.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\HexGrid.cs" />
+    <Compile Include="Assets\Scripts\MapGeneration\HexGridChunk.cs" />
+    <Compile Include="Assets\Scripts\MapGeneration\HexMapCamera.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\HexMapEditor.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\HexMesh.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\HexMetrics.cs" />

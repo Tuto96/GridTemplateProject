@@ -4,8 +4,10 @@ public enum HexDirection
 {
     NE, E, SE, SW, W, NW
 }
-
-
+public enum HexEdgeType
+{
+    Flat, Slope, Cliff
+}
 public static class HexDirectionExtensions
 {
 
@@ -20,5 +22,5 @@ public static class HexDirectionExtensions
     public static HexDirection Next(this HexDirection direction)
     {
         return direction == HexDirection.NW ? HexDirection.NE : (direction + 1);
-    }
+    }       
 }
