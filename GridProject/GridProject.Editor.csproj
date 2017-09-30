@@ -144,6 +144,8 @@
     <Compile Include="Assets\Editor\HexCoordinateDrawer.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Shaders\RiverShader.shader" />
+    <None Include="Assets\Shaders\RoadsShader.shader" />
     <None Include="Assets\Shaders\VertexColors.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

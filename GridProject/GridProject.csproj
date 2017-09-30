@@ -95,8 +95,11 @@
     <Compile Include="Assets\Scripts\MapGeneration\HexMapEditor.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\HexMesh.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\HexMetrics.cs" />
+    <Compile Include="Assets\Scripts\MapGeneration\ListPool.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Shaders\RiverShader.shader" />
+    <None Include="Assets\Shaders\RoadsShader.shader" />
     <None Include="Assets\Shaders\VertexColors.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
