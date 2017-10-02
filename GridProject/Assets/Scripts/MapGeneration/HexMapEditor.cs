@@ -12,9 +12,13 @@ public class HexMapEditor : MonoBehaviour
     
     private int activeElevation;
 
+    int activeWaterLevel;
+
     bool applyColor;
 
     bool applyElevation = true;
+
+    bool applyWaterLevel = true;
 
     int brushSize;
 
@@ -28,6 +32,8 @@ public class HexMapEditor : MonoBehaviour
     bool isDrag;
     HexDirection dragDirection;
     HexCell previousCell;
+
+    #region UI Methods
 
     public void SetRiverMode(int mode)
     {
@@ -43,6 +49,42 @@ public class HexMapEditor : MonoBehaviour
     {
         roadMode = (OptionalToggle)mode;
     }
+
+    public void SetApplyWaterLevel(bool toggle)
+    {
+        applyWaterLevel = toggle;
+    }
+
+    public void SetWaterLevel(float level)
+    {
+        activeWaterLevel = (int)level;
+    }
+
+    public void SetElevation(float elevation)
+    {
+        activeElevation = (int)elevation;
+    }
+
+    public void SelectColor(int index)
+    {
+        applyColor = index >= 0;
+        if (applyColor)
+        {
+            activeColor = colors[index];
+        }
+    }
+
+    public void SetApplyElevation(bool toggle)
+    {
+        applyElevation = toggle;
+    }
+
+    public void ShowUI(bool visible)
+    {
+        hexGrid.ShowUI(visible);
+    }
+
+#endregion
 
     void Awake()
     {
@@ -60,12 +102,7 @@ public class HexMapEditor : MonoBehaviour
             previousCell = null;
         }
     }
-
-    public void SetElevation(float elevation)
-    {
-        activeElevation = (int)elevation;
-    }
-
+    
     void HandleInput()
     {
         Ray inputRay = Camera.main.ScreenPointToRay(Input.mousePosition);
@@ -123,6 +160,10 @@ public class HexMapEditor : MonoBehaviour
             {
                 cell.Elevation = activeElevation;
             }
+            if (applyWaterLevel)
+            {
+                cell.WaterLevel = activeWaterLevel;
+            }
             if (riverMode == OptionalToggle.No)
             {
                 cell.RemoveRiver();
@@ -147,25 +188,6 @@ public class HexMapEditor : MonoBehaviour
                 }
             }
         }
-    }
-
-    public void SelectColor(int index)
-    {
-        applyColor = index >= 0;
-        if (applyColor)
-        {
-            activeColor = colors[index];
-        }
-    }
-
-    public void SetApplyElevation(bool toggle)
-    {
-        applyElevation = toggle;
-    }
-
-    public void ShowUI(bool visible)
-    {
-        hexGrid.ShowUI(visible);
     }
 
     void ValidateDrag(HexCell currentCell)

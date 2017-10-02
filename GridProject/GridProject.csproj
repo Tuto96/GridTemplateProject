@@ -96,11 +96,16 @@
     <Compile Include="Assets\Scripts\MapGeneration\HexMesh.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\HexMetrics.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\ListPool.cs" />
+    <Compile Include="Assets\Scripts\MapGeneration\UISliderShowNumber.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Shaders\EstuaryShader.shader" />
     <None Include="Assets\Shaders\RiverShader.shader" />
     <None Include="Assets\Shaders\RoadsShader.shader" />
+    <None Include="Assets\Shaders\ShoreShader.shader" />
     <None Include="Assets\Shaders\VertexColors.shader" />
+    <None Include="Assets\Shaders\Water.cginc" />
+    <None Include="Assets\Shaders\WaterShader.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

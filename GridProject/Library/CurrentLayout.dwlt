@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 521}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -107,10 +107,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 1068
-  m_MinSize: {x: 713, y: 471}
-  m_MaxSize: {x: 18008, y: 14021}
+  m_MinSize: {x: 711, y: 471}
+  m_MaxSize: {x: 18006, y: 14021}
   vertical: 0
-  controlID: 77
+  controlID: 147
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -131,10 +131,10 @@ MonoBehaviour:
     y: 0
     width: 1177
     height: 1068
-  m_MinSize: {x: 202, y: 321}
-  m_MaxSize: {x: 4002, y: 8021}
+  m_MinSize: {x: 202, y: 342}
+  m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 44
+  controlID: 12
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -153,14 +153,14 @@ MonoBehaviour:
     y: 0
     width: 1177
     height: 646
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 13}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 471}
   m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
-  controlID: 78
+  controlID: 90
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -316,7 +316,7 @@ MonoBehaviour:
     height: 625
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
-  m_Stats: 0
+  m_Stats: 1
   m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
   m_ZoomArea:
@@ -334,7 +334,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 1
+    m_EnableMouseInput: 0
     m_EnableSliderZoom: 0
     m_UniformScale: 1
     m_UpDirection: 1
@@ -391,14 +391,14 @@ MonoBehaviour:
     width: 1175
     height: 625
   m_SceneLighting: 1
-  lastFramingTime: 78083.61694931259
+  lastFramingTime: 1796.0882118602492
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 101.845474, y: -14.035255, z: 87.70393}
+    m_Target: {x: 139.1638, y: 8.241318, z: 12.860957}
     speed: 2
-    m_Value: {x: 101.845474, y: -14.035255, z: 87.70393}
+    m_Value: {x: 139.1638, y: 8.241318, z: 12.860957}
   m_RenderMode: 2
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -421,18 +421,18 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: 0.33168444, y: -0.6145563, z: 0.31784663, w: 0.6413108}
+    m_Target: {x: -0.19125345, y: 0.71205014, z: -0.21233942, w: -0.64134127}
     speed: 2
-    m_Value: {x: 0.33168444, y: -0.6145563, z: 0.31784663, w: 0.6413108}
+    m_Value: {x: -0.19125345, y: 0.71205014, z: -0.21233942, w: -0.64134127}
   m_Size:
-    m_Target: 39.017044
+    m_Target: 17.831781
     speed: 2
-    m_Value: 39.017044
+    m_Value: 17.831781
   m_Ortho:
     m_Target: 0
     speed: 2
     m_Value: 0
-  m_LastSceneViewRotation: {x: 0.34670663, y: 0.034602124, z: -0.012800226, w: 0.9372478}
+  m_LastSceneViewRotation: {x: -0.33168444, y: 0.6145563, z: -0.31784663, w: -0.6413108}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -562,9 +562,9 @@ MonoBehaviour:
     height: 304
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
-    m_ExpandedIDs: 6860f4fffea3f4ff5e5af6fff03af7ff6cdff7ff2eeef7ff1a28f8ff68d0faff9c01fbff2656fbff789ffeff50dffeff3a98ffff4098ffff18fcffff1afcffff0000000028270000
+    m_SelectedIDs: b422feff
+    m_LastClickedID: -122188
+    m_ExpandedIDs: cc22feff1c68ffff14fcffff18fcffff1afcffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -625,19 +625,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Materials/Textures
+    - Assets/Materials
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Materials/Textures
+  - Assets/Materials
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\crestrepo\Documents\GIT\GridTemplateProject\GridProject
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 1c260000
-    m_LastClickedID: 9756
-    m_ExpandedIDs: 000000000a260000242600002826000000ca9a3bffffff7f
+    m_SelectedIDs: 46260000
+    m_LastClickedID: 9798
+    m_ExpandedIDs: 000000001a260000422600004626000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -665,7 +665,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000a2600002426000028260000
+    m_ExpandedIDs: 000000001a2600004226000046260000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
