@@ -9,6 +9,8 @@ public class HexGrid : MonoBehaviour
 
     public HexCell cellPrefab;
 
+    public string seed;
+
     public int chunkCountX = 4, chunkCountZ = 3;
 
     int cellCountX, cellCountZ;
@@ -27,6 +29,8 @@ public class HexGrid : MonoBehaviour
     {
 
         HexMetrics.noiseSource = noiseSource;
+        HexMetrics.InitializeHashGrid(seed);
+
         cellCountX = chunkCountX * HexMetrics.chunkSizeX;
         cellCountZ = chunkCountZ * HexMetrics.chunkSizeZ;
 
@@ -64,7 +68,11 @@ public class HexGrid : MonoBehaviour
 
     void OnEnable()
     {
-        HexMetrics.noiseSource = noiseSource;
+        if (!HexMetrics.noiseSource)
+        {
+            HexMetrics.noiseSource = noiseSource;
+            HexMetrics.InitializeHashGrid(seed);
+        }
     }
 
     void CreateCell(int x, int z, int i)

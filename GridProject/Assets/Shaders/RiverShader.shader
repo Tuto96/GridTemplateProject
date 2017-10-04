@@ -21,6 +21,7 @@
 
 		struct Input {
 			float2 uv_MainTex;
+			float3 worldPos;
 		};
 
 		half _Glossiness;
@@ -35,6 +36,7 @@
 		UNITY_INSTANCING_CBUFFER_END
 
 		void surf (Input IN, inout SurfaceOutputStandard o) {
+		
 			float river = River(IN.uv_MainTex, _MainTex);
 			
 			fixed4 c = saturate(_Color + river);

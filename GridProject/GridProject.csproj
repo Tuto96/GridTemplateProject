@@ -89,6 +89,7 @@
     <Compile Include="Assets\Scripts\MapGeneration\Grid.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\HexCell.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\HexCoordinates.cs" />
+    <Compile Include="Assets\Scripts\MapGeneration\HexFeatureManager.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\HexGrid.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\HexGridChunk.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\HexMapCamera.cs" />

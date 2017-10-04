@@ -1,5 +1,22 @@
 ﻿using UnityEngine;
 
+public struct HexHash
+{
+
+    public float a, b, c, d, e;
+
+    public static HexHash Create()
+    {
+        HexHash hash;
+        hash.a = Random.value * 0.999f;
+        hash.b = Random.value * 0.999f;
+        hash.c = Random.value * 0.999f;
+        hash.d = Random.value * 0.999f;
+        hash.e = Random.value * 0.999f;
+        return hash;
+    }
+}
+
 public static class HexMetrics
 {
 
@@ -14,6 +31,17 @@ public static class HexMetrics
     };
 
     public static Texture2D noiseSource;
+
+    static HexHash[] hashGrid;
+
+    static float[][] featureThresholds = {
+        new float[] {0.0f, 0.0f, 0.4f},
+        new float[] {0.0f, 0.4f, 0.6f},
+        new float[] {0.4f, 0.6f, 0.8f}
+    };
+
+
+    #region Constants
 
     public const float solidFactor = 0.8f;
 
@@ -53,6 +81,16 @@ public static class HexMetrics
 
     public const int chunkSizeX = 5, chunkSizeZ = 5;
 
+    public const int hashGridSize = 256;
+
+    public const float hashGridScale = 0.25f;
+
+
+
+#endregion
+
+    #region Edges and Corners
+
     public static Vector3 GetFirstCorner(HexDirection direction)
     {
         return corners[(int)direction];
@@ -82,6 +120,24 @@ public static class HexMetrics
     {
         return corners[(int)direction + 1] * waterFactor;
     }
+
+    public static HexEdgeType GetEdgeType(int elevation1, int elevation2)
+    {
+        if (elevation1 == elevation2)
+        {
+            return HexEdgeType.Flat;
+        }
+        int delta = elevation2 - elevation1;
+        if (delta == 1 || delta == -1)
+        {
+            return HexEdgeType.Slope;
+        }
+        return HexEdgeType.Cliff;
+    }
+
+    #endregion
+
+    #region Bridges and terraces
 
     public static Vector3 GetBridge(HexDirection direction)
     {
@@ -118,20 +174,10 @@ public static class HexMetrics
         return Color.Lerp(a, b, h);
     }
 
-    public static HexEdgeType GetEdgeType(int elevation1, int elevation2)
-    {
-        if (elevation1 == elevation2)
-        {
-            return HexEdgeType.Flat;
-        }
-        int delta = elevation2 - elevation1;
-        if (delta == 1 || delta == -1)
-        {
-            return HexEdgeType.Slope;
-        }
-        return HexEdgeType.Cliff;
-    }
+    #endregion
 
+    #region Randomizers
+    
     public static Vector4 SampleNoise(Vector3 position)
     {
         return noiseSource.GetPixelBilinear(
@@ -146,5 +192,46 @@ public static class HexMetrics
         position.x += (sample.x * 2f - 1f) * cellPerturbStrength;
         position.z += (sample.z * 2f - 1f) * cellPerturbStrength;
         return position;
+    }    
+
+    public static void InitializeHashGrid(int seed)
+    {
+        Random.State currentState = Random.state;
+        hashGrid = new HexHash[hashGridSize * hashGridSize];
+        Random.InitState(seed);
+        for (int i = 0; i < hashGrid.Length; i++)
+        {
+            hashGrid[i] = HexHash.Create();
+        }
+        Random.state = currentState;
     }
+
+    public static void InitializeHashGrid(string seed)
+    {
+        InitializeHashGrid(seed.GetHashCode());
+    }
+
+    public static HexHash SampleHashGrid(Vector3 position)
+    {
+        int x = (int)(position.x * hashGridScale) % hashGridSize;
+        if (x < 0)
+        {
+            x += hashGridSize;
+        }
+        int z = (int)(position.z * hashGridScale) % hashGridSize;
+        if (z < 0)
+        {
+            z += hashGridSize;
+        }
+        return hashGrid[x + z * hashGridSize];
+    }
+
+    #endregion
+
+    public static float[] GetFeatureThresholds(int level)
+    {
+        return featureThresholds[level];
+    }
+
+
 }
