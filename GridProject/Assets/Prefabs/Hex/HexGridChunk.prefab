@@ -511,7 +511,7 @@ MeshRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1994681883184054}
   m_Enabled: 1
-  m_CastShadows: 1
+  m_CastShadows: 2
   m_ReceiveShadows: 1
   m_MotionVectors: 1
   m_LightProbeUsage: 1
@@ -736,6 +736,8 @@ MonoBehaviour:
     - {fileID: 4217061743962120, guid: cb906671025a10c45b06e1acf719466d, type: 2}
     - {fileID: 4335523588067362, guid: 9a9c0e96771dd6648b91f443a2c0f736, type: 2}
   walls: {fileID: 114442485073793958}
+  wallTower: {fileID: 4162088511277108, guid: b548d7d7fb9f99b48a9869da1cb0a840, type: 2}
+  bridge: {fileID: 4697060194494566, guid: 1997658805c7a8b43ba818c162ebe6c5, type: 2}
 --- !u!114 &114761929609057326
 MonoBehaviour:
   m_ObjectHideFlags: 1
