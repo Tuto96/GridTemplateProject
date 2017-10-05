@@ -8,9 +8,10 @@ public class HexCell : MonoBehaviour
     Color color;
 
     int elevation = int.MinValue;
-   
 
-    int urbanLevel, farmLevel, plantLevel;
+    bool walled;
+
+    int urbanLevel, farmLevel, plantLevel, waterLevel;
 
     bool hasIncomingRiver, hasOutgoingRiver;
 
@@ -21,6 +22,22 @@ public class HexCell : MonoBehaviour
 
     [SerializeField]
     HexCell[] neighbors = new HexCell[6];
+
+    public bool Walled
+    {
+        get
+        {
+            return walled;
+        }
+        set
+        {
+            if (walled != value)
+            {
+                walled = value;
+                Refresh();
+            }
+        }
+    }
 
     public int UrbanLevel
     {
@@ -87,8 +104,6 @@ public class HexCell : MonoBehaviour
             }
         }
     }
-
-    int waterLevel;
 
     public Color Color
     {
