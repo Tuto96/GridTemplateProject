@@ -21,6 +21,8 @@ public class HexFeatureManager : MonoBehaviour
 
     public Transform wallTower, bridge;
 
+    public Transform[] special;
+
     Transform container;
 
     public void Clear() {
@@ -40,6 +42,10 @@ public class HexFeatureManager : MonoBehaviour
     }
 
     public void AddFeature(HexCell cell, Vector3 position) {
+        if (cell.IsSpecial)
+        {
+            return;
+        }
         HexHash hash = HexMetrics.SampleHashGrid(position);
         Transform prefab = PickPrefab( urbanCollections, cell.UrbanLevel, hash.a, hash.d);
         Transform otherPrefab = PickPrefab( farmCollections, cell.FarmLevel, hash.b, hash.d);
@@ -316,6 +322,15 @@ public class HexFeatureManager : MonoBehaviour
         instance.localScale = new Vector3(
             1f, 1f, length / (HexMetrics.innerRadius * 2) 
         );
+        instance.SetParent(container, false);
+    }
+
+    public void AddSpecialFeature(HexCell cell, Vector3 position)
+    {
+        Transform instance = Instantiate(special[cell.SpecialIndex - 1]);
+        instance.localPosition = HexMetrics.Perturb(position);
+        HexHash hash = HexMetrics.SampleHashGrid(position);
+        instance.localRotation = Quaternion.Euler(0f, 360f * hash.e, 0f);
         instance.SetParent(container, false);
     }
 }
