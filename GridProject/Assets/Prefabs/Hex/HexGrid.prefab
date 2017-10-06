@@ -34,7 +34,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1515970317152336}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 51.99311, y: 74.84246, z: 39.43499}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -51,13 +51,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 46e3cd96bd799554b993cc5148481403, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  defaultColor: {r: 1, g: 1, b: 1, a: 1}
   touchedColor: {r: 1, g: 0, b: 1, a: 1}
+  colors:
+  - {r: 0.9803922, g: 0.854902, b: 0.59607846, a: 1}
+  - {r: 0.4431373, g: 0.47058827, b: 0.15686275, a: 1}
+  - {r: 0.67058825, g: 0.60784316, b: 0.4784314, a: 1}
+  - {r: 0.5803922, g: 0.41176474, b: 0.227451, a: 1}
+  - {r: 0.9058824, g: 0.8941177, b: 0.86666673, a: 1}
   cellPrefab: {fileID: 114881814558488312, guid: ce797d4fd0590fb4a8f15ef961104ffb,
     type: 2}
-  seed: 
-  chunkCountX: 4
-  chunkCountZ: 3
+  seed: tuto
+  cellCountX: 20
+  cellCountZ: 15
   cellLabelPrefab: {fileID: 114771802234866726, guid: b8353b4655a8e0145abb5e24354289dd,
     type: 2}
   noiseSource: {fileID: 2800000, guid: 36c776b49ccde3c4394d6aadf6d399e2, type: 3}

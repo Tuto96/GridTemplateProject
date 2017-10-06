@@ -124,6 +124,7 @@ public class HexMapEditor : MonoBehaviour
         hexGrid.ShowUI(visible);
     }
 
+
 #endregion
 
     void Update()
@@ -260,33 +261,6 @@ public class HexMapEditor : MonoBehaviour
             }
         }
         isDrag = false;
-    }
-
-    public void Save()
-    {
-        string path = Path.Combine(Application.persistentDataPath, "test.hexmap");
-        using ( BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.Create)) )
-        {
-            writer.Write(0);
-            hexGrid.Save(writer);
-        }
-    }
-
-    public void Load()
-    {
-        string path = Path.Combine(Application.persistentDataPath, "test.hexmap");
-        using ( BinaryReader reader = new BinaryReader(File.Open(path, FileMode.Open)) )
-        {
-            int header = reader.ReadInt32();
-            if (header == 0)
-            {
-                hexGrid.Load(reader);
-            }
-            else
-            {
-                Debug.LogWarning("Unknown map format " + header);
-            }
-        }
     }
 
 }
