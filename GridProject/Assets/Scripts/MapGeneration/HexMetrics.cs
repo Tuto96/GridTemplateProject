@@ -40,8 +40,6 @@ public static class HexMetrics
         new float[] {0.4f, 0.6f, 0.8f}
     };
 
-    public static Color[] colors;
-
     #region Constants
 
     public const float solidFactor = 0.8f;

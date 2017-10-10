@@ -600,6 +600,7 @@ MonoBehaviour:
   useColors: 0
   useUVCoordinates: 0
   useUV2Coordinates: 0
+  useTerrainTypes: 0
 --- !u!114 &114078154256764818
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -615,6 +616,7 @@ MonoBehaviour:
   useColors: 0
   useUVCoordinates: 1
   useUV2Coordinates: 0
+  useTerrainTypes: 0
 --- !u!114 &114313269547848696
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -623,7 +625,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1476036960692334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddca20e1dbac1bb438cb343b0f738803, type: 3}
+  m_Script: {fileID: 11500000, guid: 082b200fe119ace47aecaca47b5579b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   terrain: {fileID: 114771161994400640}
@@ -648,6 +650,7 @@ MonoBehaviour:
   useColors: 0
   useUVCoordinates: 1
   useUV2Coordinates: 0
+  useTerrainTypes: 0
 --- !u!114 &114442485073793958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -663,6 +666,7 @@ MonoBehaviour:
   useColors: 0
   useUVCoordinates: 0
   useUV2Coordinates: 0
+  useTerrainTypes: 0
 --- !u!114 &114621945333318854
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -678,6 +682,7 @@ MonoBehaviour:
   useColors: 0
   useUVCoordinates: 1
   useUV2Coordinates: 1
+  useTerrainTypes: 0
 --- !u!114 &114713965197713868
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -693,6 +698,7 @@ MonoBehaviour:
   useColors: 0
   useUVCoordinates: 1
   useUV2Coordinates: 0
+  useTerrainTypes: 0
 --- !u!114 &114717057523696960
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -777,6 +783,7 @@ MonoBehaviour:
   useColors: 1
   useUVCoordinates: 0
   useUV2Coordinates: 0
+  useTerrainTypes: 1
 --- !u!223 &223233216308272324
 Canvas:
   m_ObjectHideFlags: 1

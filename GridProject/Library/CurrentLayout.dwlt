@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 542}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -107,10 +107,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 1068
-  m_MinSize: {x: 713, y: 492}
-  m_MaxSize: {x: 18008, y: 14042}
+  m_MinSize: {x: 713, y: 471}
+  m_MaxSize: {x: 18008, y: 14021}
   vertical: 0
-  controlID: 135
+  controlID: 142
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 342}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 136
+  controlID: 12
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -179,8 +179,8 @@ MonoBehaviour:
     y: 701
     width: 1176
     height: 367
-  m_MinSize: {x: 102, y: 121}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 100, y: 100}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -208,10 +208,10 @@ MonoBehaviour:
     y: 0
     width: 427
     height: 1068
-  m_MinSize: {x: 234, y: 492}
-  m_MaxSize: {x: 10004, y: 14042}
+  m_MinSize: {x: 234, y: 471}
+  m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
-  controlID: 46
+  controlID: 101
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,8 +230,8 @@ MonoBehaviour:
     y: 0
     width: 427
     height: 325
-  m_MinSize: {x: 204, y: 221}
-  m_MaxSize: {x: 4004, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 18}
   m_Panes:
   - {fileID: 18}
@@ -391,14 +391,14 @@ MonoBehaviour:
     width: 1174
     height: 680
   m_SceneLighting: 1
-  lastFramingTime: 131.0887502613562
+  lastFramingTime: 4190.190872869599
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 603.5373, y: 303.9439, z: 0}
+    m_Target: {x: 581.04755, y: 353.80447, z: 0}
     speed: 2
-    m_Value: {x: 603.5373, y: 303.9439, z: 0}
+    m_Value: {x: 581.04755, y: 353.80447, z: 0}
   m_RenderMode: 2
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -425,9 +425,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 707.9144
+    m_Target: 744.90515
     speed: 2
-    m_Value: 707.9144
+    m_Value: 744.90515
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -561,10 +561,10 @@ MonoBehaviour:
     width: 423
     height: 304
   m_TreeViewState:
-    scrollPos: {x: 0, y: 257}
-    m_SelectedIDs: 5e2c0000
-    m_LastClickedID: 11358
-    m_ExpandedIDs: 5ef0ffff00000000822a00004c2c0000de2c0000e82c0000c22d0000942e0000922f0000f82f0000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: e2820000
+    m_LastClickedID: 0
+    m_ExpandedIDs: 94e1f7ff6af0f7ff884cf8ff68e7feff886affff8af5ffff000000005e290000222a0000b82b0000f22b00000e2d0000822d0000e82d0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -625,19 +625,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets
+    - Assets/Scripts/MapGeneration
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets
+  - Assets/Scripts/MapGeneration
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\crestrepo\Documents\GIT\GridTemplateProject\GridProject
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 0a2a0000
-    m_LastClickedID: 10762
-    m_ExpandedIDs: 000000000a2a0000202a0000282a00002a2a00002c2a000000ca9a3bffffff7f
+    m_SelectedIDs: de270000
+    m_LastClickedID: 10206
+    m_ExpandedIDs: 000000007e270000ee270000f027000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -665,7 +665,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000000a2a0000202a0000282a00002a2a00002c2a0000
+    m_ExpandedIDs: 000000007e270000dc270000ee270000f0270000f2270000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -692,8 +692,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c62300004884fdfffe450000c62900009e320000082c0000602800008c2c0000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c62300004884fdfffe450000c62900009e320000082c0000602800008c2c00004e5c000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
