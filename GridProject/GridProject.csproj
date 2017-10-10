@@ -97,6 +97,9 @@
     <Compile Include="Assets\Scripts\MapGeneration\HexMesh.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\HexMetrics.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\ListPool.cs" />
+    <Compile Include="Assets\Scripts\MapGeneration\NewMapMenu.cs" />
+    <Compile Include="Assets\Scripts\MapGeneration\SaveLoadItem.cs" />
+    <Compile Include="Assets\Scripts\MapGeneration\SaveLoadMenu.cs" />
     <Compile Include="Assets\Scripts\MapGeneration\UISliderShowNumber.cs" />
   </ItemGroup>
   <ItemGroup>
