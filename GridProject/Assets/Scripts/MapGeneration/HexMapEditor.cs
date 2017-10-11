@@ -6,6 +6,8 @@ public class HexMapEditor : MonoBehaviour
 {
     
     public HexGrid hexGrid;
+
+    public Material terrainMaterial;
     
     private int activeElevation;
 
@@ -124,9 +126,23 @@ public class HexMapEditor : MonoBehaviour
         hexGrid.ShowUI(visible);
     }
 
+    public void ShowGrid (bool visible) {
+		if (visible) {
+			terrainMaterial.EnableKeyword("GRID_ON");
+		}
+		else {
+			terrainMaterial.DisableKeyword("GRID_ON");
+		}
+	}
+
 
 #endregion
 
+
+    void Awake () {
+		terrainMaterial.DisableKeyword("GRID_ON");
+	}
+    
     void Update()
     {
         if (Input.GetMouseButton(0) && !EventSystem.current.IsPointerOverGameObject())

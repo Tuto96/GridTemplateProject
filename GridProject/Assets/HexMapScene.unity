@@ -2153,7 +2153,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 0
     m_MaxSize: 300
     m_Alignment: 4
@@ -5211,7 +5211,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Show Labels
+  m_Text: Show Borders
 --- !u!222 &783178144
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6579,7 +6579,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1958010987}
-        m_MethodName: ShowUI
+        m_MethodName: ShowGrid
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6650,7 +6650,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 7
@@ -6659,9 +6659,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Roads
-
-'
+  m_Text: Roads
 --- !u!222 &931857382
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14651,6 +14649,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hexGrid: {fileID: 1579150133}
+  terrainMaterial: {fileID: 2100000, guid: 37c2a3c8f8405544aa1c37dcf42a5190, type: 2}
 --- !u!114 &1958010988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15158,7 +15157,7 @@ MonoBehaviour:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 0
+    m_BestFit: 1
     m_MinSize: 10
     m_MaxSize: 40
     m_Alignment: 7
@@ -15167,9 +15166,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Rivers
-
-'
+  m_Text: Rivers
 --- !u!222 &2009380441
 CanvasRenderer:
   m_ObjectHideFlags: 0
