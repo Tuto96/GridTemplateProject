@@ -29,6 +29,5 @@ This project is licensed under the CC Zero v1.0 Universal
 
 ## Acknowledgments
 
-* Digital Dust for their marching cubes implementation
 * Catlike Coding for their awesome tutorials
 * Vancouver Film School
