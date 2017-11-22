@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: NewShirt
+  m_EditorClassIdentifier: Assembly-CSharp::ChestPiece
+  itemName: Item Name Here
+  plusStrength: 0
+  plusAgility: 0
+  plusIntelligence: 0
+  plusHealth: 0
+  plusAP: 0
+  plusMana: 0
+  plusMeleeDmg: 0
+  plusRangedDmg: 0
+  plusMagicDmg: 0
+  plusMeleeDef: 0
+  plusRangedDef: 0
+  plusMagicDef: 0
+  plusMoveSpeed: 0
+  plusAttackSpeed: 0
+  plusEvasion: 0
+  multStrength: 0
+  multAgility: 0
+  multIntelligence: 0
+  multHealth: 0
+  multAP: 0
+  multMana: 0
+  multMeleeDmg: 0
+  multRangedDmg: 0
+  multMagicDmg: 0
+  multMeleeDef: 0
+  multRangedDef: 0
+  multMagicDef: 0
+  multMoveSpeed: 0
+  multAttackSpeed: 0
+  multEvasion: 0

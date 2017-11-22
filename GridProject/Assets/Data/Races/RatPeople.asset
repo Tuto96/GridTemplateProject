@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0e1eec548ed0dc4a94217aad4772ca2, type: 3}
+  m_Name: RatPeople
+  m_EditorClassIdentifier: 
+  raceName: Rat People
+  baseStrength: 1
+  baseAgility: 3
+  baseIntelligence: 2
+  baseHealth: 30
+  baseAP: 17
+  baseMana: 15
+  baseMeleeDmg: 3
+  baseRangedDmg: 5
+  baseMagicDmg: 1
+  baseMeleeDef: 1
+  baseRangedDef: 3
+  baseMagicDef: 2
+  baseMoveSpeed: 13
+  baseAttackSpeed: 12
+  baseEvasion: 8
+  multHealth: 5
+  multAP: 0.333
+  multMana: 5
+  multMeleeDmg: 0.4
+  multRangedDmg: 0.3
+  multMagicDmg: 0.5
+  multMeleeDef: 0.3
+  multRangedDef: 0.25
+  multMagicDef: 0.25
+  multMoveSpeed: 0.3
+  multAttackSpeed: 0.5
+  multEvasion: 1

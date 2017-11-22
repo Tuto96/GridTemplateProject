@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.IO;
+using UnityEngine;
 
 [System.Serializable]
 public struct HexCoordinates
@@ -22,28 +23,28 @@ public struct HexCoordinates
         }
     }
 
-    public HexCoordinates(int x, int z)
+    public HexCoordinates (int x, int z)
     {
         this.x = x;
         this.z = z;
     }
 
-    public static HexCoordinates FromOffsetCoordinates(int x, int z)
+    public static HexCoordinates FromOffsetCoordinates (int x, int z)
     {
-        return new HexCoordinates(x - z / 2, z);
+        return new HexCoordinates (x - z / 2, z);
     }
 
-    public override string ToString()
+    public override string ToString ()
     {
-        return "(" + X.ToString() + ", " + Y.ToString() + ", " + Z.ToString() + ")";
+        return "(" + X.ToString () + ", " + Y.ToString () + ", " + Z.ToString () + ")";
     }
 
-    public string ToStringOnSeparateLines()
+    public string ToStringOnSeparateLines ()
     {
-        return X.ToString() + "\n" + Y.ToString() + "\n" + Z.ToString();
+        return X.ToString () + "\n" + Y.ToString () + "\n" + Z.ToString ();
     }
 
-    public static HexCoordinates FromPosition(Vector3 position)
+    public static HexCoordinates FromPosition (Vector3 position)
     {
         float x = position.x / (HexMetrics.innerRadius * 2f);
         float y = -x;
@@ -51,14 +52,14 @@ public struct HexCoordinates
         x -= offset;
         y -= offset;
 
-        int iX = Mathf.RoundToInt(x);
-        int iY = Mathf.RoundToInt(y);
-        int iZ = Mathf.RoundToInt(-x - y);
+        int iX = Mathf.RoundToInt (x);
+        int iY = Mathf.RoundToInt (y);
+        int iZ = Mathf.RoundToInt (-x - y);
         if (iX + iY + iZ != 0)
         {
-            float dX = Mathf.Abs(x - iX);
-            float dY = Mathf.Abs(y - iY);
-            float dZ = Mathf.Abs(-x - y - iZ);
+            float dX = Mathf.Abs (x - iX);
+            float dY = Mathf.Abs (y - iY);
+            float dZ = Mathf.Abs (-x - y - iZ);
 
             if (dX > dY && dX > dZ)
             {
@@ -70,7 +71,52 @@ public struct HexCoordinates
             }
         }
 
-        return new HexCoordinates(iX, iZ);
+        return new HexCoordinates (iX, iZ);
+    }
+
+    public HexDirection DirectionTo (HexCoordinates other)
+    {
+        if (X == other.X)
+        {
+            if (Z < other.Z)
+            {
+                return HexDirection.NE;
+            }
+            else
+            {
+                return HexDirection.SW;
+            }
+        }
+        else
+        if (Z == other.Z)
+        {
+            if (X < other.X)
+            {
+                return HexDirection.E;
+            }
+            else
+            {
+                return HexDirection.W;
+            }
+        }
+        else
+        {
+            if (Z < other.Z)
+            {
+                return HexDirection.NW;
+            }
+            else
+            {
+                return HexDirection.SE;
+            }
+        }
+    }
+
+    public int DistanceTo (HexCoordinates other)
+    {
+        return ((x < other.x ? other.x - x : x - other.x) +
+            (Y < other.Y ? other.Y - Y : Y - other.Y) +
+            (z < other.z ? other.z - z : z - other.z)) / 2;
     }
 
     public int Y
@@ -79,5 +125,19 @@ public struct HexCoordinates
         {
             return -X - Z;
         }
+    }
+
+    public void Save (BinaryWriter writer)
+    {
+        writer.Write (x);
+        writer.Write (z);
+    }
+
+    public static HexCoordinates Load (BinaryReader reader)
+    {
+        HexCoordinates c;
+        c.x = reader.ReadInt32 ();
+        c.z = reader.ReadInt32 ();
+        return c;
     }
 }

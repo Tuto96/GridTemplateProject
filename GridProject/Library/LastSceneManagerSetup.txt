@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/HexMapScene.unity
+- path: Assets/Scenes/HexMapScene.unity
   isLoaded: 1
   isActive: 1
