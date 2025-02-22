@@ -1,0 +1,48 @@
+# GitLab CI/CD template for GitHub sync
+# Place this file as .gitlab-ci.yml in your repository
+
+variables:
+  GIT_STRATEGY: clone
+  GIT_DEPTH: 0  # Fetch all history for proper syncing
+
+# Sync to GitHub on schedule (default: every day at midnight)
+github-sync-scheduled:
+  script:
+    - git config --global user.name "GitLab CI"
+    - git config --global user.email "gitlab-ci@local.gitlab"
+    - git remote add github "git@github.com:Tuto96/${CI_PROJECT_NAME}.git" || git remote set-url github "git@github.com:Tuto96/${CI_PROJECT_NAME}.git"
+    - git push github HEAD:${CI_COMMIT_REF_NAME} --force
+    - git push github --tags --force
+  only:
+    - schedules
+  tags:
+    - shell
+
+# Sync to GitHub when a tag is pushed
+github-sync-tags:
+  script:
+    - git config --global user.name "GitLab CI"
+    - git config --global user.email "gitlab-ci@local.gitlab"
+    - git remote add github "git@github.com:Tuto96/${CI_PROJECT_NAME}.git" || git remote set-url github "git@github.com:Tuto96/${CI_PROJECT_NAME}.git"
+    - git push github HEAD:${CI_COMMIT_REF_NAME} --force
+    - git push github --tags --force
+  only:
+    - tags
+  tags:
+    - shell
+
+# Optional: Sync specific branches immediately
+github-sync-branches:
+  script:
+    - git config --global user.name "GitLab CI"
+    - git config --global user.email "gitlab-ci@local.gitlab"
+    - git remote add github "git@github.com:Tuto96/${CI_PROJECT_NAME}.git" || git remote set-url github "git@github.com:Tuto96/${CI_PROJECT_NAME}.git"
+    - git push github HEAD:${CI_COMMIT_REF_NAME} --force
+    - git push github --tags --force
+  only:
+    refs:
+      - main
+      - master
+      - develop
+  tags:
+    - shell
